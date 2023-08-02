@@ -93,16 +93,18 @@ namespace DAL
             }
             return products;
         }
-        public ProductSize GetProductSizeByProductIDAndSizeID(int productID, int sizeID)
+        public ProductSize GetProductSizeByProductIDAndSizeID(int productID, string size)
         {
             ProductSize product = new ProductSize();
             try
             {
                 MySqlCommand command = new MySqlCommand("", connection);
-                query = @"SELECT * FROM productsizes WHERE Product_ID = @productid AND size_id = @sizeid;";
+                query = @"SELECT * FROM productsizes PS
+                INNER JOIN sizes S ON S.size_id = PS.size_id
+                WHERE Product_ID = @productid AND S.size = @size;";
                 command.CommandText = query;
                 command.Parameters.AddWithValue("@productid", productID);
-                command.Parameters.AddWithValue("@sizeid", sizeID);
+                command.Parameters.AddWithValue("@size", size);
                 MySqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {

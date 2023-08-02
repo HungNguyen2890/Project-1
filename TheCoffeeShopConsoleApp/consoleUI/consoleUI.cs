@@ -47,7 +47,7 @@ namespace UI
             Console.WriteLine("====================================================================================================================================================================================================================");
             Console.WriteLine(" --- CREATE ORDER -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("====================================================================================================================================================================================================================");
-            Console.WriteLine("| {0, 10} | {1, 35} | {2, 35} | {3, 20} | {4, 96} |", "Product ID", "Product Name", "Product Description", "Product Status", "Size - Status - Price");
+            Console.WriteLine("| {0, 10} | {1, 35} | {2, 35} | {3, 18} | {4, 88} |", "Product ID", "Product Name", "Product Description", "Product Status", "Size - Status - Price");
             Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
         }
         public void ShowListProduct(List<Product> products)
@@ -55,10 +55,10 @@ namespace UI
             CultureInfo cultureInfo = new CultureInfo("vi-VN");
             foreach (Product item in products)
             {
-                Console.Write("| {0, 10} | {1, 35} | {2, 35} | {3, 20} |", item.ProductID, item.ProductName, item.Description, (item.Status == 0) ? "Available For Sale" : "Not For Sale");
+                Console.Write("| {0, 10} | {1, 35} | {2, 35} | {3, 15} |", item.ProductID, item.ProductName, item.Description, (item.Status == 0) ? "Available For Sale" : "Not For Sale");
                 foreach (ProductSize ps in item.ProductSizes)
                 {
-                    Console.Write(" {0, 2} - {1, 10} - {2, 12} |", ps.Size.size.ToUpper(), (ps.ProductSizeStatus == 0) ? "In Stock" : ((ps.ProductSizeStatus == 1) ? "Out Of Stock" : ""), string.Format(cultureInfo, "{0:N0} VND", ps.Price));
+                    Console.Write(" {0, 2} - {1, 10} - {2, 10} |", ps.Size.size.ToUpper(), (ps.ProductSizeStatus == 0) ? "In Stock" : ((ps.ProductSizeStatus == 1) ? "Out Of Stock" : ""), string.Format(cultureInfo, "{0:N0} VND", ps.Price));
                 }
                 Console.Write("\n");
             }

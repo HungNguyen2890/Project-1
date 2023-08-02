@@ -77,8 +77,10 @@ public class Program
         {
             OrderBL oBL = new OrderBL();
             bool active = true, activeSub = true, isAddMore = false;
-            int productID = 0, sizeID = 0, quantity = 0, isValidSize = 0, addMoreChoice = 0;
+            int productID = 0, quantity = 0, isValidSize = 0, addMoreChoice = 0;
+            string size = "";
             Order order = new Order();
+            List<Product> products = new List<Product>();
             List<ProductSize> productSizesInOrder = new List<ProductSize>();
             ProductSize productSizeInOrder = new ProductSize();
             string answer;
@@ -111,12 +113,16 @@ public class Program
                                     UI.CreateOrderTitle();
                                     UI.ShowListProduct(pBL.GetAllProduct());
                                 }
+                                else
+                                {
+                                    products.Add(pBL.GetProductByID(productID));
+                                }
                             } while (pBL.GetProductByID(productID).Status == 1 || productID <= 0 || productID > pBL.GetAllProduct().Count());
                             do
                             {
                                 isValidSize = 1;
-                                Console.Write("Enter Product Size ( 1 - S / 2 - M / 3 - L): ");
-                                int.TryParse(Console.ReadLine(), out sizeID);
+                                Console.Write("Enter Product Size S/M/L: ");
+                                size = Console.ReadLine() ?? "";
 
 
                                 foreach (ProductSize item in pBL.GetProductByID(productID).ProductSizes)
@@ -126,11 +132,11 @@ public class Program
                                         isValidSize = 0;
                                     }
                                 }
-                                if (isValidSize == 0 || sizeID <= 0 || sizeID > pBL.GetProductByID(productID).ProductSizes.Count())
+                                if (isValidSize == 0 || !(String.Equals(size, "s") || String.Equals(size, "m") || String.Equals(size, "l")))
                                 {
                                     if (isValidSize == 0)
                                         Console.WriteLine("This Product Is Out Of Stock!");
-                                    if (sizeID <= 0 || sizeID > pBL.GetProductByID(productID).ProductSizes.Count())
+                                    if (size != "s" || size != "m" || size != "l")
                                         Console.WriteLine("Invalid Choice!");
                                     UI.PressAnyKeyToContinue();
                                     UI.CreateOrderTitle();
@@ -139,9 +145,9 @@ public class Program
                                 }
                                 else
                                 {
-                                    productSizeInOrder = pBL.GetProductSizeByProductIDAndSizeID(productID, sizeID);
+                                    productSizeInOrder = pBL.GetProductSizeByProductIDAndSizeID(productID, size);
                                 }
-                            } while (isValidSize == 0 || sizeID <= 0 || sizeID > pBL.GetProductByID(productID).ProductSizes.Count());
+                            } while (isValidSize == 0 || !(String.Equals(size, "s") || String.Equals(size, "m") || String.Equals(size, "l")));
                             do
                             {
                                 Console.Write("Enter Quantity: ");
@@ -152,7 +158,7 @@ public class Program
                                     UI.CreateOrderTitle();
                                     UI.ShowListProduct(pBL.GetAllProduct());
                                     Console.WriteLine("Product ID: " + productID);
-                                    Console.WriteLine("Product Size: {0}", (sizeID == 1) ? "S" : (sizeID == 2) ? "M" : (sizeID == 3) ? "L" : "");
+                                    Console.WriteLine("Product Size: {0}", size);
                                 }
                                 else
                                 {
@@ -169,7 +175,7 @@ public class Program
                                     UI.CreateOrderTitle();
                                     UI.ShowListProduct(pBL.GetAllProduct());
                                     Console.WriteLine("Product ID: " + productID);
-                                    Console.WriteLine("Product Size: {0}", (sizeID == 1) ? "S" : (sizeID == 2) ? "M" : (sizeID == 3) ? "L" : "");
+                                    Console.WriteLine("Product Size: {0}", size);
                                     Console.WriteLine("Quantity: " + quantity);
                                 }
                             } while (addMoreChoice <= 0 || addMoreChoice > 2);
@@ -179,6 +185,7 @@ public class Program
                         order.ProductsSize = productSizesInOrder;
                         Console.WriteLine(oBL.CreateOrder(order) ? "Create Order Completed" : "Create Order Failed");
                         UI.PressAnyKeyToContinue();
+
                         break;
                     case 2:
                         break;
