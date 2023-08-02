@@ -1,0 +1,6 @@
+D:\prjV1.0\CoffeeShopLib.dll
+D:\prjV1.0\CoffeeShopLib.deps.json
+D:\prjV1.0\CoffeeShopLib.pdb
+D:\prjV1.0\MySql.Data.dll
+D:\prjV1.0\MySQLConnection.dll
+D:\prjV1.0\MySqlConnector.dll

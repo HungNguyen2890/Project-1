@@ -1,0 +1,10 @@
+D:\prjV1.0\TheCoffeeShopConsoleApp.exe
+D:\prjV1.0\TheCoffeeShopConsoleApp.dll
+D:\prjV1.0\TheCoffeeShopConsoleApp.deps.json
+D:\prjV1.0\TheCoffeeShopConsoleApp.runtimeconfig.json
+D:\prjV1.0\TheCoffeeShopConsoleApp.pdb
+D:\prjV1.0\MySql.Data.dll
+D:\prjV1.0\MySQLConnection.dll
+D:\prjV1.0\MySqlConnector.dll
+D:\prjV1.0\CoffeeShopLib.dll
+D:\prjV1.0\CoffeeShopLib.pdb

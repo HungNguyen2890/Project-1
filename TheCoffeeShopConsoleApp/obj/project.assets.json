@@ -1,0 +1,207 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "MySql.Data/6.9.8": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MySql.Data.dll": {}
+        }
+      },
+      "MySQLConnection/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MySql.Data": "6.9.8"
+        },
+        "compile": {
+          "lib/MySQLConnection.dll": {}
+        },
+        "runtime": {
+          "lib/MySQLConnection.dll": {}
+        }
+      },
+      "MySqlConnector/2.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CoffeeShopLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "mysqlconnection": "1.0.1",
+          "mysqlconnector": "2.2.7"
+        },
+        "compile": {
+          "bin/placeholder/CoffeeShopLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CoffeeShopLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MySql.Data/6.9.8": {
+      "sha512": "ZSkMKsB1J9Cb/nO3+GlfX/YttibU23y5ZQtn/xzzl3xfPK512wP1jNjiVG4AFvmeJrf02qHNc/GfXJGYYHN8Pg==",
+      "type": "package",
+      "path": "mysql.data/6.9.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES",
+        "Readme.txt",
+        "content/app.config.transform",
+        "content/web.config.transform",
+        "lib/net20-cf/MySql.Data.CF.dll",
+        "lib/net20/MySql.Data.dll",
+        "lib/net40/MySql.Data.dll",
+        "lib/net45/MySql.Data.dll",
+        "mysql.data.6.9.8.nupkg.sha512",
+        "mysql.data.nuspec"
+      ]
+    },
+    "MySQLConnection/1.0.1": {
+      "sha512": "/BflH+iLaysGbkUghDuQfrxc2Xi5ckxnqlTLlZYslYrFatqMv9+2d24EvVGKTsJO+hAZeuSs6jcO2ZIvxkkkqQ==",
+      "type": "package",
+      "path": "mysqlconnection/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MySQLConnection.dll",
+        "mysqlconnection.1.0.1.nupkg.sha512",
+        "mysqlconnection.nuspec"
+      ]
+    },
+    "MySqlConnector/2.2.7": {
+      "sha512": "rwFa71MlOJ142S+BXDvtLRdAIn7l6PTNWu+Xehs2qRehK8dckjKqwvK8azEADCMkQyXS1LXgh9HkSvItpTi6WA==",
+      "type": "package",
+      "path": "mysqlconnector/2.2.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net6.0/MySqlConnector.dll",
+        "lib/net6.0/MySqlConnector.xml",
+        "lib/net7.0/MySqlConnector.dll",
+        "lib/net7.0/MySqlConnector.xml",
+        "lib/netcoreapp3.1/MySqlConnector.dll",
+        "lib/netcoreapp3.1/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.2.2.7.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
+    "CoffeeShopLib/1.0.0": {
+      "type": "project",
+      "path": "../CoffeeShopLib/CoffeeShopLib.csproj",
+      "msbuildProject": "../CoffeeShopLib/CoffeeShopLib.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "CoffeeShopLib >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\phuca\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj",
+      "projectName": "TheCoffeeShopConsoleApp",
+      "projectPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\phuca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\TheCoffeeShopConsoleApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\phuca\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj": {
+              "projectPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MySql.Data 6.9.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MySql.Data",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MySQLConnection 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MySQLConnection",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}
