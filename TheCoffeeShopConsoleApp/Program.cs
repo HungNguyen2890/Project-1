@@ -5,7 +5,7 @@ using Persistence;
 
 public class Program
 {
-    static Staff loginstaff = new Staff();
+    static Staff? loginstaff = null;
     public static void Main()
     {
         Ultilities UI = new Ultilities();
@@ -47,146 +47,148 @@ public class Program
         } while (key != ConsoleKey.Enter);
 
         loginstaff = uBL.Authorize(username, pass);
-        if (loginstaff.RoleID == 1)
+        if (loginstaff != null)
         {
-            string[] unprocessedAction = { "Change Status To Processing", "Back To Previous Menu" };
-            string[] processingAction = { "Change Status To Completed", "Back To Previous Menu" };
-            int ordID;
-            bool active = true;
-            bool activeSub = true;
-            while (active)
+
+            if (loginstaff.RoleID == 1)
             {
-                int bartenderChoice = UI.MenuHandle(@"
+                string[] unprocessedAction = { "Change Status To Processing", "Back To Previous Menu" };
+                string[] processingAction = { "Change Status To Completed", "Back To Previous Menu" };
+                int ordID;
+                bool active = true;
+                bool activeSub = true;
+                while (active)
+                {
+                    int bartenderChoice = UI.MenuHandle(@"
 ▒█▀▀█ █▀▀█ █▀▀█ ▀▀█▀▀ █▀▀ █▀▀▄ █▀▀▄ █▀▀ █▀▀█ 
 ▒█▀▀▄ █▄▄█ █▄▄▀ ░░█░░ █▀▀ █░░█ █░░█ █▀▀ █▄▄▀ 
 ▒█▄▄█ ▀░░▀ ▀░▀▀ ░░▀░░ ▀▀▀ ▀░░▀ ▀▀▀░ ▀▀▀ ▀░▀▀", bartenderMenu, loginstaff);
-                switch (bartenderChoice)
-                {
-                    case 1:
+                    switch (bartenderChoice)
+                    {
+                        case 1:
 
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        active = false;
-                        break;
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            active = false;
+                            break;
+                    }
                 }
             }
-        }
-        else if (loginstaff.RoleID == 2)
-        {
-            OrderBL oBL = new OrderBL();
-            bool active = true, activeSub = true, isAddMore = false;
-            int productID = 0, quantity = 0, isValidSize = 0, addMoreChoice = 0;
-            string size = "";
-            Order order = new Order();
-            List<Product> products = new List<Product>();
-            List<ProductSize> productSizesInOrder = new List<ProductSize>();
-            ProductSize productSizeInOrder = new ProductSize();
-            string answer;
-
-            while (active)
+            else if (loginstaff.RoleID == 2)
             {
-                int cashierChoice = UI.MenuHandle(@"
+                OrderBL oBL = new OrderBL();
+                bool active = true, activeSub = true, isAddMore = false;
+                int productID = 0, quantity = 0, isValidSize = 0, addMoreChoice = 0;
+                string size = "";
+                Order order = new Order();
+                List<Product> products = new List<Product>();
+                List<ProductSize> productSizesInOrder = new List<ProductSize>();
+                ProductSize productSizeInOrder = new ProductSize();
+                string answer;
+
+                while (active)
+                {
+                    int cashierChoice = UI.MenuHandle(@"
 ▒█▀▀█ █▀▀█ █▀▀ █░░█ ░▀░ █▀▀ █▀▀█ 
 ▒█░░░ █▄▄█ ▀▀█ █▀▀█ ▀█▀ █▀▀ █▄▄▀ 
 ▒█▄▄█ ▀░░▀ ▀▀▀ ▀░░▀ ▀▀▀ ▀▀▀ ▀░▀▀", cashierMenu, loginstaff);
-                switch (cashierChoice)
-                {
-                    case 1:
-                        do
-                        {
-
-                            UI.CreateOrderTitle();
-                            UI.ShowListProduct(pBL.GetAllProduct());
+                    switch (cashierChoice)
+                    {
+                        case 1:
                             do
                             {
-                                Console.Write("Choose Product By ID: ");
-                                int.TryParse(Console.ReadLine(), out productID);
-                                if (pBL.GetProductByID(productID).Status == 1 || productID <= 0 || productID > pBL.GetAllProduct().Count())
-                                {
-                                    if (pBL.GetProductByID(productID).Status == 1)
-                                        Console.WriteLine("This Product Not For Sale!");
-                                    if (productID <= 0 || productID > pBL.GetAllProduct().Count())
-                                        Console.WriteLine("Invalid Choice!");
-                                    UI.PressAnyKeyToContinue();
-                                    UI.CreateOrderTitle();
-                                    UI.ShowListProduct(pBL.GetAllProduct());
-                                }
-                                else
-                                {
-                                    products.Add(pBL.GetProductByID(productID));
-                                }
-                            } while (pBL.GetProductByID(productID).Status == 1 || productID <= 0 || productID > pBL.GetAllProduct().Count());
-                            do
-                            {
-                                isValidSize = 1;
-                                Console.Write("Enter Product Size S/M/L: ");
-                                size = (Console.ReadLine() ?? "").ToLower();
 
-                                foreach (ProductSize item in pBL.GetProductSizeByProductID(productID))
+                                UI.CreateOrderTitle();
+                                UI.ShowListProduct(pBL.GetAllProduct());
+                                do
                                 {
-                                    if (item.ProductSizeStatus == 1)
+                                    Console.Write("Choose Product By ID: ");
+                                    int.TryParse(Console.ReadLine(), out productID);
+                                    if (pBL.GetProductByID(productID).Status == 1 || productID <= 0 || productID > pBL.GetAllProduct().Count())
                                     {
-                                        isValidSize = 0;
+                                        if (pBL.GetProductByID(productID).Status == 1)
+                                            Console.WriteLine("This Product Not For Sale!");
+                                        if (productID <= 0 || productID > pBL.GetAllProduct().Count())
+                                            Console.WriteLine("Invalid Choice!");
+                                        UI.PressAnyKeyToContinue();
+                                        UI.CreateOrderTitle();
+                                        UI.ShowListProduct(pBL.GetAllProduct());
                                     }
-                                }
-                                if (isValidSize == 0 || !(size == "s" || size == "m" || size == "l"))
+                                    else
+                                    {
+                                        products.Add(pBL.GetProductByID(productID));
+                                    }
+                                } while (pBL.GetProductByID(productID).Status == 1 || productID <= 0 || productID > pBL.GetAllProduct().Count());
+                                do
                                 {
-                                    if (isValidSize == 0)
-                                        Console.WriteLine("This Product Is Out Of Stock!");
-                                    if (!(size == "s" || size == "m" || size == "l"))
+                                    isValidSize = 1;
+                                    Console.Write("Enter Product Size S/M/L: ");
+                                    size = (Console.ReadLine() ?? "").ToLower();
+
+                                    foreach (ProductSize item in pBL.GetProductSizeByProductID(productID))
+                                    {
+                                        if (item.ProductSizeStatus == 1)
+                                        {
+                                            isValidSize = 0;
+                                        }
+                                    }
+                                    if (isValidSize == 0 || !(size == "s" || size == "m" || size == "l"))
+                                    {
+                                        if (isValidSize == 0)
+                                            Console.WriteLine("This Product Is Out Of Stock!");
+                                        if (!(size == "s" || size == "m" || size == "l"))
+                                            Console.WriteLine("Invalid Choice!");
+                                        UI.PressAnyKeyToContinue();
+                                        UI.CreateOrderTitle();
+                                        UI.ShowListProduct(pBL.GetAllProduct());
+                                        Console.WriteLine("Product ID: " + productID);
+                                    }
+                                    else
+                                    {
+                                        productSizeInOrder = pBL.GetProductSizeByProductIDAndSizeID(productID, size);
+                                    }
+                                } while (isValidSize == 0 || !(size == "s" || size == "m" || size == "l"));
+                                do
+                                {
+                                    Console.Write("Enter Quantity: ");
+                                    int.TryParse(Console.ReadLine(), out quantity);
+                                    if (quantity <= 0)
+                                    {
+                                        Console.WriteLine("Invalid Quantity!");
+                                        UI.CreateOrderTitle();
+                                        UI.ShowListProduct(pBL.GetAllProduct());
+                                        Console.WriteLine("Product ID: " + productID);
+                                        Console.WriteLine("Product Size: {0}", size);
+                                    }
+                                    else
+                                    {
+                                        productSizeInOrder.Quantity = quantity;
+                                    }
+                                } while (quantity <= 0);
+                                do
+                                {
+                                    Console.Write("Press '1' To Add More, '2' To Create Order: ");
+                                    int.TryParse(Console.ReadLine(), out addMoreChoice);
+
+
+                                    if (addMoreChoice <= 0 || addMoreChoice > 2)
+                                    {
                                         Console.WriteLine("Invalid Choice!");
-                                    UI.PressAnyKeyToContinue();
-                                    UI.CreateOrderTitle();
-                                    UI.ShowListProduct(pBL.GetAllProduct());
-                                    Console.WriteLine("Product ID: " + productID);
-                                }
-                                else
-                                {
-                                    productSizeInOrder = pBL.GetProductSizeByProductIDAndSizeID(productID, size);
-                                }
-                            } while (isValidSize == 0 || !(size == "s" || size == "m" || size == "l"));
-                            do
-                            {
-                                Console.Write("Enter Quantity: ");
-                                int.TryParse(Console.ReadLine(), out quantity);
-                                if (quantity <= 0)
-                                {
-                                    Console.WriteLine("Invalid Quantity!");
-                                    UI.CreateOrderTitle();
-                                    UI.ShowListProduct(pBL.GetAllProduct());
-                                    Console.WriteLine("Product ID: " + productID);
-                                    Console.WriteLine("Product Size: {0}", size);
-                                }
-                                else
-                                {
-                                    productSizeInOrder.Quantity = quantity;
-                                }
-                            } while (quantity <= 0);
-                            do
-                            {
-                                Console.Write("Press '1' To Add More, '2' To Create Order: ");
-                                int.TryParse(Console.ReadLine(), out addMoreChoice);
+                                        UI.CreateOrderTitle();
+                                        UI.ShowListProduct(pBL.GetAllProduct());
+                                        Console.WriteLine("Product ID: " + productID);
+                                        Console.WriteLine("Product Size: {0}", size);
+                                        Console.WriteLine("Quantity: " + quantity);
+                                    }
+                                } while (addMoreChoice <= 0 || addMoreChoice > 2);
+                                productSizesInOrder.Add(productSizeInOrder);
+                                if (addMoreChoice == 2) break;
+                            } while (addMoreChoice == 1);
+                            order.CreateBy = loginstaff;
+                            order.ProductsSize = productSizesInOrder;
 
-
-                                if (addMoreChoice <= 0 || addMoreChoice > 2)
-                                {
-                                    Console.WriteLine("Invalid Choice!");
-                                    UI.CreateOrderTitle();
-                                    UI.ShowListProduct(pBL.GetAllProduct());
-                                    Console.WriteLine("Product ID: " + productID);
-                                    Console.WriteLine("Product Size: {0}", size);
-                                    Console.WriteLine("Quantity: " + quantity);
-                                }
-                            } while (addMoreChoice <= 0 || addMoreChoice > 2);
-                            productSizesInOrder.Add(productSizeInOrder);
-                        } while (addMoreChoice == 1);
-                        order.CreateBy = loginstaff;
-                        order.ProductsSize = productSizesInOrder;
-                        if (addMoreChoice == 2)
-                        {
-                            Console.Clear();
                             Console.WriteLine(@"
 
 ▀▀█▀▀ █░░█ █▀▀   ▒█▀▀█ █▀▀█ █▀▀ █▀▀ █▀▀ █▀▀   ▒█▀▀▀█ █░░█ █▀▀█ █▀▀█ 
@@ -218,28 +220,47 @@ public class Program
                             Console.WriteLine("{0,64}", "Total Price: " + oBL.CalculateTotalPriceInOrder(productSizesInOrder) + " VND");
                             UI.Line();
                             Console.WriteLine("\n\t \t🌸 THANK YOU, SEE YOU AGAIN 🌸");
-                        }
-                        // Console.WriteLine(oBL.CreateOrder(order) ? "Create Order Completed" : "Create Order Failed");
-                        Console.WriteLine(" Create Order Success");
-                        UI.PressAnyKeyToContinue();
-                        productSizesInOrder = new List<ProductSize>();
+                            if (oBL.CreateOrder(order))
+                            {
+                                ShowSuccess("Create Order Completed");
+                                ShowSuccess("Order has been sent to the bartender");
+                            }
+                            else
+                            {
+                                ShowError("Create Order Failed");
+                            };
+                            UI.PressAnyKeyToContinue();
+                            productSizesInOrder = new List<ProductSize>();
 
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        active = false;
-                        break;
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            active = false;
+                            break;
 
+                    }
                 }
             }
         }
         else
         {
-            Console.WriteLine("Invalid User Name Or Password!");
+            Console.WriteLine("\nInvalid User Name Or Password!");
+            UI.PressAnyKeyToContinue();
             Main();
         }
         return;
-
+    }
+    static void ShowSuccess(string msg)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine(msg + "!");
+        Console.ForegroundColor = ConsoleColor.White;
+    }
+    static void ShowError(string msg)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine(msg + "!");
+        Console.ForegroundColor = ConsoleColor.White;
     }
 }
