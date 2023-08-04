@@ -1,0 +1,10 @@
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\TheCoffeeShopConsoleApp.exe
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\TheCoffeeShopConsoleApp.dll
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\TheCoffeeShopConsoleApp.deps.json
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\TheCoffeeShopConsoleApp.runtimeconfig.json
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\TheCoffeeShopConsoleApp.pdb
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\MySql.Data.dll
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\MySQLConnection.dll
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\MySqlConnector.dll
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\coffeeshopv0.4\CoffeeShopLib.pdb

@@ -1,6 +1,6 @@
 using Persistence;
 using System.Globalization; // thu vien format tien 
-
+using BL;
 namespace UI
 {
     public class Ultilities
@@ -43,20 +43,24 @@ namespace UI
         }
         public void CreateOrderTitle()
         {
-
-            Console.WriteLine("====================================================================================================================================================================================================================");
-            Console.WriteLine(" --- CREATE ORDER -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("====================================================================================================================================================================================================================");
+            Console.Clear();
+            Console.WriteLine("-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===--===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===--===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-");
+            Console.WriteLine(@"
+                                                     ▒█▀▀█ ▒█▀▀█ ▒█▀▀▀ ░█▀▀█ ▀▀█▀▀ ▒█▀▀▀ 　 ▒█▀▀▀█ ▒█▀▀█ ▒█▀▀▄ ▒█▀▀▀ ▒█▀▀█ 
+                                                     ▒█░░░ ▒█▄▄▀ ▒█▀▀▀ ▒█▄▄█ ░▒█░░ ▒█▀▀▀ 　 ▒█░░▒█ ▒█▄▄▀ ▒█░▒█ ▒█▀▀▀ ▒█▄▄▀ 
+                                                     ▒█▄▄█ ▒█░▒█ ▒█▄▄▄ ▒█░▒█ ░▒█░░ ▒█▄▄▄ 　 ▒█▄▄▄█ ▒█░▒█ ▒█▄▄▀ ▒█▄▄▄ ▒█░▒█ ");
+            Console.WriteLine("-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===--===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===--===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-");
             Console.WriteLine("| {0, 10} | {1, 35} | {2, 35} | {3, 18} | {4, 88} |", "Product ID", "Product Name", "Product Description", "Product Status", "Size - Status - Price");
-            Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===--===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===--===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-===-");
         }
         public void ShowListProduct(List<Product> products)
         {
+            ProductBL productBL = new ProductBL();
             CultureInfo cultureInfo = new CultureInfo("vi-VN");
             foreach (Product item in products)
             {
                 Console.Write("| {0, 10} | {1, 35} | {2, 35} | {3, 15} |", item.ProductID, item.ProductName, item.Description, (item.Status == 0) ? "Available For Sale" : "Not For Sale");
-                foreach (ProductSize ps in item.ProductSizes)
+                foreach (ProductSize ps in productBL.GetProductSizeByProductID(item.ProductID))
                 {
                     Console.Write(" {0, 2} - {1, 10} - {2, 10} |", ps.Size.size.ToUpper(), (ps.ProductSizeStatus == 0) ? "In Stock" : ((ps.ProductSizeStatus == 1) ? "Out Of Stock" : ""), string.Format(cultureInfo, "{0:N0} VND", ps.Price));
                 }

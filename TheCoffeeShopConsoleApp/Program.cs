@@ -122,21 +122,20 @@ public class Program
                             {
                                 isValidSize = 1;
                                 Console.Write("Enter Product Size S/M/L: ");
-                                size = Console.ReadLine() ?? "";
+                                size = (Console.ReadLine() ?? "").ToLower();
 
-
-                                foreach (ProductSize item in pBL.GetProductByID(productID).ProductSizes)
+                                foreach (ProductSize item in pBL.GetProductSizeByProductID(productID))
                                 {
                                     if (item.ProductSizeStatus == 1)
                                     {
                                         isValidSize = 0;
                                     }
                                 }
-                                if (isValidSize == 0 || !(String.Equals(size, "s") || String.Equals(size, "m") || String.Equals(size, "l")))
+                                if (isValidSize == 0 || !(size == "s" || size == "m" || size == "l"))
                                 {
                                     if (isValidSize == 0)
                                         Console.WriteLine("This Product Is Out Of Stock!");
-                                    if (size != "s" || size != "m" || size != "l")
+                                    if (!(size == "s" || size == "m" || size == "l"))
                                         Console.WriteLine("Invalid Choice!");
                                     UI.PressAnyKeyToContinue();
                                     UI.CreateOrderTitle();
@@ -147,7 +146,7 @@ public class Program
                                 {
                                     productSizeInOrder = pBL.GetProductSizeByProductIDAndSizeID(productID, size);
                                 }
-                            } while (isValidSize == 0 || !(String.Equals(size, "s") || String.Equals(size, "m") || String.Equals(size, "l")));
+                            } while (isValidSize == 0 || !(size == "s" || size == "m" || size == "l"));
                             do
                             {
                                 Console.Write("Enter Quantity: ");
@@ -169,6 +168,8 @@ public class Program
                             {
                                 Console.Write("Press '1' To Add More, '2' To Create Order: ");
                                 int.TryParse(Console.ReadLine(), out addMoreChoice);
+
+
                                 if (addMoreChoice <= 0 || addMoreChoice > 2)
                                 {
                                     Console.WriteLine("Invalid Choice!");
@@ -183,8 +184,45 @@ public class Program
                         } while (addMoreChoice == 1);
                         order.CreateBy = loginstaff;
                         order.ProductsSize = productSizesInOrder;
-                        Console.WriteLine(oBL.CreateOrder(order) ? "Create Order Completed" : "Create Order Failed");
+                        if (addMoreChoice == 2)
+                        {
+                            Console.Clear();
+                            Console.WriteLine(@"
+
+▀▀█▀▀ █░░█ █▀▀   ▒█▀▀█ █▀▀█ █▀▀ █▀▀ █▀▀ █▀▀   ▒█▀▀▀█ █░░█ █▀▀█ █▀▀█ 
+░▒█░░ █▀▀█ █▀▀   ▒█░░░ █░░█ █▀▀ █▀▀ █▀▀ █▀▀   ░▀▀▀▄▄ █▀▀█ █░░█ █░░█ 
+░▒█░░ ▀░░▀ ▀▀▀   ▒█▄▄█ ▀▀▀▀ ▀░░ ▀░░ ▀▀▀ ▀▀▀   ▒█▄▄▄█ ▀░░▀ ▀▀▀▀ █▀▀▀ 
+                                                       🆅 🅴 🆁 : 0.1");
+
+                            Console.WriteLine(@"{0,20}", @"
+                  
+                ░█▀▀█ █▀▀ █▀▀ █▀▀ ─▀─ █▀▀█ ▀▀█▀▀ 
+                ░█▄▄▀ █▀▀ █── █▀▀ ▀█▀ █──█ ──█── 
+                ░█─░█ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀ █▀▀▀ ──▀──
+                ");
+
+                            UI.Line();
+                            Console.WriteLine("ADD: 18 Tam Trinh- Hai Ba Trung- Ha Noi");
+                            Console.WriteLine("Phone: 0852394222 - 0969055545");
+                            int dateTimeHandle = 0;
+                            int ordIDh = 0;
+                            DateTime currentDateTime = DateTime.Now;
+                            Console.WriteLine("Order Date Time: " + currentDateTime);
+                            UI.Line();
+                            Console.WriteLine("| {0,19} | {1, 10} | {2, 10} | {3, 10} |", "Product", "Quantity", "Size", "Price");
+                            foreach (var item in productSizesInOrder)
+                            {
+                                Console.WriteLine("| {0,19} | {1, 10} | {2, 10} | {3, 10} |", item.Product.ProductName, item.Quantity, item.Size.size, item.Price);
+                            }
+                            UI.Line();
+                            Console.WriteLine("{0,64}", "Total Price: " + oBL.CalculateTotalPriceInOrder(productSizesInOrder) + " VND");
+                            UI.Line();
+                            Console.WriteLine("\n\t \t🌸 THANK YOU, SEE YOU AGAIN 🌸");
+                        }
+                        // Console.WriteLine(oBL.CreateOrder(order) ? "Create Order Completed" : "Create Order Failed");
+                        Console.WriteLine(" Create Order Success");
                         UI.PressAnyKeyToContinue();
+                        productSizesInOrder = new List<ProductSize>();
 
                         break;
                     case 2:

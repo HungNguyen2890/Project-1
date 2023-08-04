@@ -17,7 +17,6 @@ namespace DAL
             product.ProductName = reader.GetString("Product_Name");
             product.Status = reader.GetInt32("Product_Status");
             product.Description = reader.GetString("Description");
-            product.ProductSizes = new List<ProductSize>();
             return product;
         }
         internal Size GetSize(MySqlDataReader reader)
@@ -31,6 +30,8 @@ namespace DAL
         {
             ProductSize productSize = new ProductSize();
             productSize.ProductSizeID = reader.GetInt32("product_size_id");
+            productSize.ProductID = reader.GetInt32("product_id");
+            productSize.Product = new Product();
             productSize.Size = new Size();
             productSize.SizeID = reader.GetInt32("size_id");
             productSize.ProductSizeStatus = reader.GetInt32("Product_Size_Status");
@@ -57,11 +58,6 @@ namespace DAL
             {
                 Console.WriteLine(ex.Message);
             }
-            product.ProductSizes = GetProductSizesByProductID(product.ProductID);
-            foreach (ProductSize ps in product.ProductSizes)
-            {
-                ps.Size = GetSizeByID(ps.SizeID);
-            }
             return product;
         }
         public List<Product> GetAllProduct()
@@ -82,14 +78,6 @@ namespace DAL
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
-            }
-            foreach (Product p in products)
-            {
-                p.ProductSizes = GetProductSizesByProductID(p.ProductID);
-                foreach (ProductSize ps in p.ProductSizes)
-                {
-                    ps.Size = GetSizeByID(ps.SizeID);
-                }
             }
             return products;
         }
@@ -117,6 +105,7 @@ namespace DAL
                 Console.WriteLine(ex.Message);
             }
             product.Size = GetSizeByID(product.SizeID);
+            product.Product = GetProductByID(product.ProductID);
             return product;
         }
         public List<ProductSize> GetProductSizesByProductID(int productID)
@@ -138,6 +127,15 @@ namespace DAL
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+
+            if (productsSize.Count() != 0)
+            {
+                foreach (ProductSize item in productsSize)
+                {
+                    item.Size = GetSizeByID(item.SizeID);
+                    item.Product = GetProductByID(item.ProductID);
+                }
             }
             return productsSize;
         }
