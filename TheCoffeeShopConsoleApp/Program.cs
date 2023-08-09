@@ -17,6 +17,7 @@ public class Program
         string username, pwd;
         StaffBL uBL = new StaffBL();
         Console.Clear();
+
         Console.WriteLine(@"
 
 ▀▀█▀▀ █░░█ █▀▀   ▒█▀▀█ █▀▀█ █▀▀ █▀▀ █▀▀ █▀▀   ▒█▀▀▀█ █░░█ █▀▀█ █▀▀█ 
@@ -24,6 +25,7 @@ public class Program
 ░▒█░░ ▀░░▀ ▀▀▀   ▒█▄▄█ ▀▀▀▀ ▀░░ ▀░░ ▀▀▀ ▀▀▀   ▒█▄▄▄█ ▀░░▀ ▀▀▀▀ █▀▀▀ 
                                                        🆅 🅴 🆁 : 0.1");
         UI.Line();
+
         Console.Write("Username: ");
         username = Console.ReadLine();
         Console.Write("Password: ");
@@ -85,6 +87,7 @@ public class Program
                 Order order = new Order();
                 List<Product> products = new List<Product>();
                 List<ProductSize> productSizesInOrder = new List<ProductSize>();
+                List<ProductSize> productSizeClone = new List<ProductSize>();
                 ProductSize productSizeInOrder = new ProductSize();
                 string answer;
 
@@ -109,9 +112,9 @@ public class Program
                                     if (pBL.GetProductByID(productID).Status == 1 || productID <= 0 || productID > pBL.GetAllProduct().Count())
                                     {
                                         if (pBL.GetProductByID(productID).Status == 1)
-                                            Console.WriteLine("This Product Not For Sale!");
+                                            ShowError("This Product Not For Sale!");
                                         if (productID <= 0 || productID > pBL.GetAllProduct().Count())
-                                            Console.WriteLine("Invalid Choice!");
+                                            ShowError("Invalid Choice!");
                                         UI.PressAnyKeyToContinue();
                                         UI.CreateOrderTitle();
                                         UI.ShowListProduct(pBL.GetAllProduct());
@@ -137,9 +140,9 @@ public class Program
                                     if (isValidSize == 0 || !(size == "s" || size == "m" || size == "l"))
                                     {
                                         if (isValidSize == 0)
-                                            Console.WriteLine("This Product Is Out Of Stock!");
+                                            ShowError("This Product Is Out Of Stock!");
                                         if (!(size == "s" || size == "m" || size == "l"))
-                                            Console.WriteLine("Invalid Choice!");
+                                            ShowError("Invalid Choice!");
                                         UI.PressAnyKeyToContinue();
                                         UI.CreateOrderTitle();
                                         UI.ShowListProduct(pBL.GetAllProduct());
@@ -156,7 +159,7 @@ public class Program
                                     int.TryParse(Console.ReadLine(), out quantity);
                                     if (quantity <= 0)
                                     {
-                                        Console.WriteLine("Invalid Quantity!");
+                                        ShowError("Invalid Quantity!");
                                         UI.CreateOrderTitle();
                                         UI.ShowListProduct(pBL.GetAllProduct());
                                         Console.WriteLine("Product ID: " + productID);
@@ -167,28 +170,56 @@ public class Program
                                         productSizeInOrder.Quantity = quantity;
                                     }
                                 } while (quantity <= 0);
+                                productSizesInOrder.Add(productSizeInOrder);
                                 do
                                 {
-                                    Console.Write("Press '1' To Add More, '2' To Create Order: ");
-                                    int.TryParse(Console.ReadLine(), out addMoreChoice);
-
-
-                                    if (addMoreChoice <= 0 || addMoreChoice > 2)
-                                    {
-                                        Console.WriteLine("Invalid Choice!");
-                                        UI.CreateOrderTitle();
+                                    if (addMoreChoice == 3)
                                         UI.ShowListProduct(pBL.GetAllProduct());
-                                        Console.WriteLine("Product ID: " + productID);
-                                        Console.WriteLine("Product Size: {0}", size);
-                                        Console.WriteLine("Quantity: " + quantity);
+                                    do
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                                        Console.WriteLine("Press '1' To Add More, '2' To Create Order, '3' To Show Select Product: ");
+                                        Console.ForegroundColor = ConsoleColor.White;
+                                        int.TryParse(Console.ReadLine(), out addMoreChoice);
+
+
+                                        if (addMoreChoice <= 0 || addMoreChoice > 3)
+                                        {
+                                            ShowError("Invalid Choice!");
+                                            UI.CreateOrderTitle();
+                                            UI.ShowListProduct(pBL.GetAllProduct());
+                                            Console.WriteLine("Product ID: " + productID);
+                                            Console.WriteLine("Product Size: {0}", size);
+                                            Console.WriteLine("Quantity: " + quantity);
+                                        }
+                                    } while (addMoreChoice <= 0 || addMoreChoice > 3);
+
+                                    if (addMoreChoice == 2) break;
+                                    if (addMoreChoice == 3)
+                                    {
+                                        Console.Clear();
+                                       Console.WriteLine (@"
+█▀▀ █▀▀ █░░ █▀▀ █▀▀ ▀▀█▀▀ █▀▀ █▀▀▄ 　 █▀▀█ █▀▀█ █▀▀█ █▀▀▄ █░░█ █▀▀ ▀▀█▀▀ 
+▀▀█ █▀▀ █░░ █▀▀ █░░ ░░█░░ █▀▀ █░░█ 　 █░░█ █▄▄▀ █░░█ █░░█ █░░█ █░░ ░░█░░ 
+▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀ ░░▀░░ ▀▀▀ ▀▀▀░ 　 █▀▀▀ ▀░▀▀ ▀▀▀▀ ▀▀▀░ ░▀▀▀ ▀▀▀ ░░▀░░",loginstaff);
+                            
+
+
+                                        UI.Line();
+                                        Console.WriteLine("| {0,19} | {1, 10} | {2, 10} | {3, 10} |", "Product", "Quantity", "Size", "Price");
+                                        UI.Line();
+                                        foreach (var item in productSizesInOrder)
+                                        {
+                                            Console.WriteLine("| {0,19} | {1, 10} | {2, 10} | {3, 10} |", item.Product.ProductName, item.Quantity, item.Size.size, item.Price);
+                                        }
+                                        UI.Line();
+                                        UI.PressAnyKeyToContinue();
                                     }
-                                } while (addMoreChoice <= 0 || addMoreChoice > 2);
-                                productSizesInOrder.Add(productSizeInOrder);
-                                if (addMoreChoice == 2) break;
+                                } while (addMoreChoice == 3);
                             } while (addMoreChoice == 1);
                             order.CreateBy = loginstaff;
                             order.ProductsSize = productSizesInOrder;
-
+                            
                             Console.WriteLine(@"
 
 ▀▀█▀▀ █░░█ █▀▀   ▒█▀▀█ █▀▀█ █▀▀ █▀▀ █▀▀ █▀▀   ▒█▀▀▀█ █░░█ █▀▀█ █▀▀█ 
@@ -212,6 +243,7 @@ public class Program
                             Console.WriteLine("Order Date Time: " + currentDateTime);
                             UI.Line();
                             Console.WriteLine("| {0,19} | {1, 10} | {2, 10} | {3, 10} |", "Product", "Quantity", "Size", "Price");
+                            UI.Line();
                             foreach (var item in productSizesInOrder)
                             {
                                 Console.WriteLine("| {0,19} | {1, 10} | {2, 10} | {3, 10} |", item.Product.ProductName, item.Quantity, item.Size.size, item.Price);
@@ -245,7 +277,7 @@ public class Program
         }
         else
         {
-            Console.WriteLine("\nInvalid User Name Or Password!");
+            ShowError("\nInvalid User Name Or Password!");
             UI.PressAnyKeyToContinue();
             Main();
         }
@@ -263,4 +295,5 @@ public class Program
         Console.WriteLine(msg + "!");
         Console.ForegroundColor = ConsoleColor.White;
     }
+
 }
