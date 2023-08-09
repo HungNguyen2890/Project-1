@@ -20,6 +20,7 @@ namespace BL
                 sum += item.Quantity * item.Price;
             }
             return sum;
+
         }
     }
 }
