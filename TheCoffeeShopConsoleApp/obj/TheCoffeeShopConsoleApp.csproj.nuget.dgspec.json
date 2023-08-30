@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj": {}
+    "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj": {
+    "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj",
+        "projectUniqueName": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj",
         "projectName": "CoffeeShopLib",
-        "projectPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj",
+        "projectPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj",
         "packagesPath": "C:\\Users\\phuca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\CoffeeShopLib\\obj\\",
+        "outputPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\CoffeeShopLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phuca\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj": {
+    "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj",
+        "projectUniqueName": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj",
         "projectName": "TheCoffeeShopConsoleApp",
-        "projectPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj",
+        "projectPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj",
         "packagesPath": "C:\\Users\\phuca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\TheCoffeeShopConsoleApp\\obj\\",
+        "outputPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\TheCoffeeShopConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phuca\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -89,8 +89,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj": {
-                "projectPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj"
+              "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj": {
+                "projectPath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\CoffeeShopLib\\CoffeeShopLib.csproj"
               }
             }
           }

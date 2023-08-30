@@ -1,0 +1,24 @@
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\bin\Realse\net7.0\CoffeeShopLib.deps.json
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\bin\Realse\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\bin\Realse\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.csproj.AssemblyReference.cache
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.AssemblyInfoInputs.cache
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.AssemblyInfo.cs
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.csproj.CoreCompileInputs.cache
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Realse\net7.0\refint\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Realse\net7.0\ref\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\bin\Realse\net7.0\CoffeeShopLib.deps.json
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\bin\Realse\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\bin\Realse\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.csproj.AssemblyReference.cache
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.AssemblyInfoInputs.cache
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.AssemblyInfo.cs
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.csproj.CoreCompileInputs.cache
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\obj\Realse\net7.0\refint\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\obj\Realse\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\CoffeeShopLib\obj\Realse\net7.0\ref\CoffeeShopLib.dll

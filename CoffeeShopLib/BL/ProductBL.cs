@@ -16,8 +16,8 @@ namespace BL
         public Product GetProductByID(int productID) {
             return pDAL.GetProductByID(productID);
         }
-        public ProductSize GetProductSizeByProductIDAndSizeID(int productID, string size) {
-            return pDAL.GetProductSizeByProductIDAndSizeID(productID, size);
+        public ProductSize GetProductSizeByProductIDAndSize(int productID, string size) {
+            return pDAL.GetProductSizeByProductIDAndSize(productID, size);
         }
     }
 }

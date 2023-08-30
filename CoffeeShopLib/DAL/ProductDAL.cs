@@ -38,6 +38,19 @@ namespace DAL
             productSize.Price = reader.GetDecimal("Price");
             return productSize;
         }
+        internal ProductSize GetProductSizeHaveQuantity(MySqlDataReader reader)
+        {
+            ProductSize productSize = new ProductSize();
+            productSize.ProductSizeID = reader.GetInt32("product_size_id");
+            productSize.ProductID = reader.GetInt32("product_id");
+            productSize.Product = new Product();
+            productSize.Size = new Size();
+            productSize.SizeID = reader.GetInt32("size_id");
+            productSize.Quantity = reader.GetInt32("quantity");
+            productSize.ProductSizeStatus = reader.GetInt32("Product_Size_Status");
+            productSize.Price = reader.GetDecimal("Price");
+            return productSize;
+        }
         public Product GetProductByID(int productID)
         {
             Product product = new Product();
@@ -81,7 +94,7 @@ namespace DAL
             }
             return products;
         }
-        public ProductSize GetProductSizeByProductIDAndSizeID(int productID, string size)
+        public ProductSize GetProductSizeByProductIDAndSize(int productID, string size)
         {
             ProductSize product = new ProductSize();
             try
@@ -114,7 +127,8 @@ namespace DAL
             try
             {
                 MySqlCommand command = new MySqlCommand("", connection);
-                query = @"SELECT * FROM productsizes WHERE product_id = @productid;";
+                query = @"SELECT * FROM productsizes PS
+                WHERE PS.product_id = @productid;";
                 command.CommandText = query;
                 command.Parameters.AddWithValue("@productid", productID);
                 MySqlDataReader reader = command.ExecuteReader();

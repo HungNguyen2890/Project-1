@@ -10,3 +10,51 @@ C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Release\net7.0\Coffe
 C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Release\net7.0\refint\CoffeeShopLib.dll
 C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.pdb
 C:\Users\phuca\OneDrive\Desktop\Project-1\CoffeeShopLib\obj\Release\net7.0\ref\CoffeeShopLib.dll
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.deps.json
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.dll
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.pdb
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.csproj.AssemblyReference.cache
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.AssemblyInfoInputs.cache
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.AssemblyInfo.cs
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.csproj.CoreCompileInputs.cache
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.dll
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\obj\Release\net7.0\refint\CoffeeShopLib.dll
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.pdb
+C:\Users\anngu\Desktop\Trung\projectHungTrung\Project-1\CoffeeShopLib\obj\Release\net7.0\ref\CoffeeShopLib.dll
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.deps.json
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.dll
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.pdb
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.csproj.AssemblyReference.cache
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.AssemblyInfoInputs.cache
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.AssemblyInfo.cs
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.csproj.CoreCompileInputs.cache
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.dll
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\obj\Release\net7.0\refint\CoffeeShopLib.dll
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.pdb
+C:\Users\anngu\Desktop\Trung\projectHungTrung (1)\Project-1\CoffeeShopLib\obj\Release\net7.0\ref\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.deps.json
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.csproj.AssemblyReference.cache
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.AssemblyInfoInputs.cache
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.AssemblyInfo.cs
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.csproj.CoreCompileInputs.cache
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\refint\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\hungtrung(2)\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\ref\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.deps.json
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\bin\Release\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.csproj.AssemblyReference.cache
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.AssemblyInfoInputs.cache
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.AssemblyInfo.cs
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.csproj.CoreCompileInputs.cache
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\refint\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\hungtrung\nguyễn duy hùng - trung\Project-1\CoffeeShopLib\obj\Release\net7.0\ref\CoffeeShopLib.dll

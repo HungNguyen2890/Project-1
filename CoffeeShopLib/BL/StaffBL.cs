@@ -18,5 +18,10 @@ namespace BL
                 return null;
             }
         }
+
+        public Staff GetStaffById(int staffId)
+        {
+            return sDAL.GetStaffByID(staffId);
+        }
     }
 }

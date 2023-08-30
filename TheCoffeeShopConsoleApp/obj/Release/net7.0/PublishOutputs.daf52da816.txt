@@ -1,0 +1,10 @@
+C:\Users\anngu\Desktop\Trung\test\TheCoffeeShopConsoleApp.exe
+C:\Users\anngu\Desktop\Trung\test\TheCoffeeShopConsoleApp.dll
+C:\Users\anngu\Desktop\Trung\test\TheCoffeeShopConsoleApp.deps.json
+C:\Users\anngu\Desktop\Trung\test\TheCoffeeShopConsoleApp.runtimeconfig.json
+C:\Users\anngu\Desktop\Trung\test\TheCoffeeShopConsoleApp.pdb
+C:\Users\anngu\Desktop\Trung\test\MySql.Data.dll
+C:\Users\anngu\Desktop\Trung\test\MySQLConnection.dll
+C:\Users\anngu\Desktop\Trung\test\MySqlConnector.dll
+C:\Users\anngu\Desktop\Trung\test\CoffeeShopLib.dll
+C:\Users\anngu\Desktop\Trung\test\CoffeeShopLib.pdb

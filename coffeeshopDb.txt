@@ -1,3 +1,4 @@
+drop database if exists coffeeshop;
 CREATE SCHEMA coffeeshop;
 USE coffeeshop;
 
@@ -18,7 +19,7 @@ INSERT INTO Staffs(staff_name, user_name, password, role_id, status) VALUES ("Ng
 -- at thi la datetime, by la int, payment method la int, decimal cho gia tien d
 CREATE TABLE Orders(
 order_id INT AUTO_INCREMENT,
-paymentmethod VARCHAR(20),
+paymentmethod VARCHAR(20) DEFAULT "NOT HAVE",
 status INT DEFAULT '0',
 create_at DATETIME DEFAULT CURRENT_TIMESTAMP(),
 create_by INT,
@@ -27,8 +28,6 @@ PRIMARY KEY (order_id),
 FOREIGN KEY (create_by) REFERENCES Staffs(staff_id)
 )engine = InnoDB;
 
-INSERT INTO Orders(paymentmethod, status, create_at, create_by,update_at) VALUES ("cash", 0, CURRENT_TIMESTAMP(), 2, CURRENT_TIMESTAMP());
-INSERT INTO Orders(paymentmethod, status, create_at, create_by,update_at) VALUES ("banking", 0, CURRENT_TIMESTAMP(), 2, CURRENT_TIMESTAMP());
 
 CREATE TABLE Products(
 product_id INT AUTO_INCREMENT,
@@ -38,18 +37,18 @@ product_status INT,
 PRIMARY KEY (product_id)
 )engine = InnoDB;
 
-INSERT INTO Products(product_name, description, product_status) VALUES ("Phin sữa", "coffee with milk", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Phin đen", "black coffee", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Espresso ", "can be ordered hot or iced ", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Americano ", "can be ordered hot or iced", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Cappuccino ", "can be ordered hot or iced", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Caramel Macchiato/ Mocha ", "can be ordered hot or iced", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Caramel Phin Freeze", "freeze with coffee", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Hazelnut Phin Freeze", "freeze with coffee", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Green Tea Freeze", "freeze with coffee", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Chocolate Freeze", "freeze with coffee", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Peach Tea With Lemongrass", "tea", 0);
-INSERT INTO Products(product_name, description, product_status) VALUES ("Lychee Tea", "tea", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Phin nâu", "Coffee With Milk", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Phin đen", "Black Coffee", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Espresso ", "Hot or Iced", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Americano ", "Hot or Iced", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Cappuccino ", "Hot or Iced", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Caramel Macchiato/ Mocha ", "Hot or Iced", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Caramel Phin Freeze", "Freeze With Coffee", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Hazelnut Phin Freeze", "Freeze With Coffee", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Green Tea Freeze", "Freeze With Coffee", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Chocolate Freeze", "Freeze With Coffee", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Peach Tea With Lemongrass", "Tea", 0);
+INSERT INTO Products(product_name, description, product_status) VALUES ("Lychee Tea", "Tea", 0);
 
 CREATE TABLE Sizes(
 size_id INT AUTO_INCREMENT,   
@@ -117,7 +116,7 @@ INSERT INTO ProductSizes(product_id, size_id, product_size_status,price) VALUES 
 INSERT INTO ProductSizes(product_id, size_id, product_size_status,price) VALUES (11,3,0,65000);
 INSERT INTO ProductSizes(product_id, size_id, product_size_status,price) VALUES (12,1,0,45000);
 INSERT INTO ProductSizes(product_id, size_id, product_size_status,price) VALUES (12,2,0,55000);
-
+INSERT INTO ProductSizes(product_id, size_id, product_size_status,price) VALUES (12,3,0,65000);
 
 CREATE TABLE ProductUpdates(
 staff_id INT AUTO_INCREMENT,
@@ -132,3 +131,6 @@ PRIMARY KEY (staff_id,product_id),
 FOREIGN KEY (staff_id) REFERENCES Staffs(staff_id),
 FOREIGN KEY (product_id) REFERENCES Products(product_id)
 ) engine = InnoDB;
+
+CREATE USER IF NOT exists 'hung'@'localhost' IDENTIFIED BY 'Hungnguyen1';
+GRANT ALL PRIVILEGES ON coffeeshop.* TO 'hung'@'localhost' WITH GRANT OPTION;

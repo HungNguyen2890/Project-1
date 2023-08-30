@@ -1,0 +1,42 @@
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.exe
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.deps.json
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.runtimeconfig.json
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.pdb
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\MySql.Data.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\MySQLConnection.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\MySqlConnector.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.csproj.AssemblyReference.cache
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.AssemblyInfoInputs.cache
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.AssemblyInfo.cs
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.csproj.CopyComplete
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\refint\TheCoffeeShopConsoleApp.dll
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.pdb
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.genruntimeconfig.cache
+C:\Users\phuca\OneDrive\Desktop\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\ref\TheCoffeeShopConsoleApp.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.exe
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.deps.json
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.runtimeconfig.json
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\TheCoffeeShopConsoleApp.pdb
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\MySql.Data.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\MySQLConnection.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\MySqlConnector.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\CoffeeShopLib.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\bin\Realse\net7.0\CoffeeShopLib.pdb
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.csproj.AssemblyReference.cache
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.AssemblyInfoInputs.cache
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.AssemblyInfo.cs
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.csproj.CopyComplete
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\refint\TheCoffeeShopConsoleApp.dll
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.pdb
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\TheCoffeeShopConsoleApp.genruntimeconfig.cache
+C:\Users\phuca\OneDrive\Desktop\New folder (2)\Project-1\TheCoffeeShopConsoleApp\obj\Realse\net7.0\ref\TheCoffeeShopConsoleApp.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y8/xBEIhEUsekiKQ90a0jHgqFxg8u7rz0LYfQ0jhWll/gfFYA5YEEtYWa6i9e1lcJTQJRk6VA53oDbxJhIrzuQ==",
+  "dgSpecHash": "cmmT9bIiSTuozUrVgn9DSRVMmFMzAiAQM3QLaNOmYVVrLgCwZUcHT7AAooJwxhNsMC9KmwgxhHRYX89G2EAujA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj",
+  "projectFilePath": "C:\\Users\\phuca\\OneDrive\\Desktop\\Project Trung- Hung PF1121\\nguyễn duy hùng - trung\\Project-1\\TheCoffeeShopConsoleApp\\TheCoffeeShopConsoleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phuca\\.nuget\\packages\\mysql.data\\6.9.8\\mysql.data.6.9.8.nupkg.sha512",
     "C:\\Users\\phuca\\.nuget\\packages\\mysqlconnection\\1.0.1\\mysqlconnection.1.0.1.nupkg.sha512",

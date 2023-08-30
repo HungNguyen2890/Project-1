@@ -21,6 +21,28 @@ namespace DAL
             staff.StaffStatus = reader.GetInt32("status");
             return staff;
         }
+        public Staff GetStaffByID(int staffID)
+        {
+            Staff staff = new Staff();
+            try
+            {
+                MySqlCommand command = new MySqlCommand("", connection);
+                query = "SELECT * FROM staffs WHERE staff_id = @staffid;";
+                command.CommandText = query;
+                command.Parameters.AddWithValue("@staffid", staffID);
+                MySqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    staff = GetStaff(reader);
+                }
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return staff;
+        }
         public Staff GetAccount(string userName)
         {
             Staff staff = new Staff();
